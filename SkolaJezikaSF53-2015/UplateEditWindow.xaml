@@ -1,0 +1,35 @@
+﻿<Window x:Class="SkolaJezikaSF53_2015.UplateEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SkolaJezikaSF53_2015"
+        mc:Ignorable="d"
+        Title="UplateEditWindow" Height="308.511" Width="346.809">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="75"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Left" Margin="10" TextWrapping="NoWrap" Text="Ucenik" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="1" HorizontalAlignment="Left" Margin="10" TextWrapping="NoWrap" Text="Kurs" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="2" HorizontalAlignment="Left" Margin="10" TextWrapping="NoWrap" Text="Iznos" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="3" HorizontalAlignment="Left" Margin="10" TextWrapping="NoWrap" Text="Datum" VerticalAlignment="Center"/>
+
+        <ComboBox SelectedItem="{Binding Path=Ucenik}" x:Name="comboBoxUcenik" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120"/>
+        <ComboBox SelectedItem="{Binding Path=Kurs}" x:Name="comboBoxKurs" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120"/>
+        <TextBox x:Name="textBoxIznos" Text="{Binding Path=Iznos}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Height="24" TextWrapping="Wrap" Width="120" Margin="0,10,72,16"/>
+        <DatePicker x:Name="datePickerDatum" SelectedDateFormat="Short" SelectedDate="{Binding Path=Datum}" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FirstDayOfWeek="Monday"/>
+
+        <Button Name="btnOk" Content="Ok" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="10" Grid.Row="5" VerticalAlignment="Center" Width="60" Click="btnOk_Click"/>
+        <Button Name="btnCancel" Content="Cancel" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="123,27,0,26" Grid.Row="4" VerticalAlignment="Center" Width="60" Click="btnCancel_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,43 @@
+﻿<Window x:Class="SkolaJezikaSF53_2015.KorisniciEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SkolaJezikaSF53_2015"
+        mc:Ignorable="d"
+        Title="KorisniciEditWindow" Height="485.555" Width="575.556">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="198*"/>
+            <ColumnDefinition Width="323*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="10,17,0,17" TextWrapping="NoWrap" Text="Ime" VerticalAlignment="Center" Height="16" Width="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,17,0,17" TextWrapping="NoWrap" Text="Prezime" VerticalAlignment="Center" Grid.Row="1" Height="16" Width="42"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,17,0,17" TextWrapping="NoWrap" Text="JMBG" VerticalAlignment="Center" Grid.Row="2" Height="16" Width="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,14,0,20" TextWrapping="NoWrap" Text="Korisnicko Ime" VerticalAlignment="Center" Grid.Row="3" Height="16" Width="77"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,14,0,20" TextWrapping="NoWrap" Text="Lozinka" VerticalAlignment="Center" Grid.Row="4" Height="16" Width="40"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,14,0,20" TextWrapping="NoWrap" Text="Admin?" VerticalAlignment="Center" Grid.Row="5" Height="16" Width="40"/>
+        <TextBox Name="tbIme" Text="{Binding Path =Ime}" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="10,14,0,14" TextWrapping="Wrap" VerticalAlignment="Center" Width="150"/>
+        <TextBox Name="tbPrezime" Text="{Binding Path =Prezime}" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="10,14,0,14" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" Grid.Row="1"/>
+        <TextBox Name="tbJMBG" Text="{Binding Path =Jmbg}" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="10,14,0,14" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" Grid.Row="2"/>
+        <TextBox Name="tbKorisnickoIme" Text="{Binding Path =Usn}" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="10,16,0,10" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" Grid.Row="3"/>
+        <TextBox Name="tbLozinka" Text="{Binding Path =Psw}" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="10,16,0,10" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" Grid.Row="4"/>
+        <CheckBox Name="cbAdmin" IsChecked="{Binding Path =Admin}" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="10,16,0,10" VerticalAlignment="Center" Width="150" Grid.Row="5"/>
+        <Button Name="btnIme" Content="OK" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Bottom" Width="76" Click="btnOk_Click" Margin="1,0,101,57" Height="22" Grid.Column="1"/>
+        <Button Name="btnPrezime" Content="Cancel" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Bottom" Width="76" Click="btnCancel_Click" Margin="18,0,0,57" Height="22"/>
+        
+
+    </Grid>
+</Window>
